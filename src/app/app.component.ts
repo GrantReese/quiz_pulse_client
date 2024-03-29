@@ -1,3 +1,7 @@
+// <router-outlet/>
+
+//the following was already in the app component when I went to add the router outlet
+
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
