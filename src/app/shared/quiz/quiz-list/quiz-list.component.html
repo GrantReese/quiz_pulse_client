@@ -1,1 +1,18 @@
-<p>quiz-list works!</p>
+@defer(on immediate) {
+<div class="quiz-container">
+  @for (quiz of quizzes; track quiz.id) {
+  <div class="quiz-preview-container">
+    <div class="quiz-preview-content">
+      <h2>{{ quiz.title }}</h2>
+      <p>{{ quiz.user?.username }}</p>
+      <!-- <p>{{ quiz.content }}</p> -->
+    </div>
+    <img
+      src="https://t3.ftcdn.net/jpg/03/45/97/36/360_F_345973621_sMifpCogXNoIDjmXlbLwx1QZA5ZmQVl8.jpg"
+      alt="quiz image"
+      class="quiz-image"
+    />
+  </div>
+  }
+</div>
+}
