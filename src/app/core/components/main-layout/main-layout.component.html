@@ -5,6 +5,7 @@
       <img src="/assets/images/logo.png" alt="logo" width="100px" />
       <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
       @if (authService.isLoggedIn()){
+        <!-- <a routerLink=>Logout</a> was creating a dead link -->
         <a (click)="logout()">Logout</a>
       }@else {
         <a routerLink="/login">Login</a>
