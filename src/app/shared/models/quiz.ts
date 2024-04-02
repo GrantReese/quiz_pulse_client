@@ -1,9 +1,9 @@
 import { User } from './user';
 
 export class Quiz {
-  id!: number;
+  // id!: number; error with forms want to signify the quiz id from api
   title: string = '';
-  decription: string = '';
+  description: string = '';
   created_date: string = '';
   quiz_content: string = '';
   // this is where content goes, but not sure how to get the quiz to show here
@@ -12,3 +12,4 @@ export class Quiz {
   user_id?: number;
   user?: User;
 }
+// new FormControl('', Validators.required)

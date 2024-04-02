@@ -19,13 +19,18 @@ import { Router } from '@angular/router';
 export class QuizzesNewComponent {
   quizForm = new FormGroup({
     title: new FormControl('', Validators.required),
-    content: new FormControl('', Validators.required),
+    description: new FormControl('', Validators.required),
+    created_date: new FormControl(new Date()),
+    quiz_content: new FormControl('', Validators.required),
+    total_score_possible: new FormControl('', [Validators.required, Validators.max(100), Validators.pattern(/^-?\d+(\.\d+)?$/)]),
+
   });
 
   constructor(private quizService: QuizService, private router: Router) {}
 
   onSubmit() {
-    this.quizService.createQuiz(this.quizForm.value).subscribe({
+    const quiz = this.quizForm.value;
+    this.quizService.createQuiz(quiz).subscribe({
       next: (quiz: Quiz) => {
         console.log('Quiz created:', quiz);
         this.router.navigate(['/']);
