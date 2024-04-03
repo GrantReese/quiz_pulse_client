@@ -18,7 +18,9 @@ import { Router } from '@angular/router';
 })
 export class QuizzesNewComponent {
   quizForm = new FormGroup({
+
     title: new FormControl('', Validators.required),
+    category: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     created_date: new FormControl(new Date()),
     quiz_content: new FormControl('', Validators.required),

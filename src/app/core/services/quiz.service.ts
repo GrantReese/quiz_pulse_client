@@ -15,7 +15,7 @@ export class QuizService {
     return this.http.get<Quiz[]>(`${environment.apiUrl}/quizzes`);
   }
 
-  createQuiz(quiz: Quiz): Observable<Quiz> {
+  createQuiz(quiz: any): Observable<Quiz> {
     return this.http.post<Quiz>(`${environment.apiUrl}/quizzes`, quiz);
   }
 }
