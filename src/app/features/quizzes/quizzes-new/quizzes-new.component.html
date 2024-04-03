@@ -3,12 +3,29 @@
 
     <form [formGroup]="quizForm" (ngSubmit)="onSubmit()" class="form">
       <div>
-        <label for="title">Title</label>
+        <label for="title">Title:</label>
         <input type="text" formControlName="title" id="title" required>
       </div>
       <div>
-        <label for="content">Content</label>
-        <textarea formControlName="content" id="content" rows="5" required></textarea>
+        <label for="category">Category:</label>
+        <input type="text" formControlName="category" id="category" required>
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea formControlName="description" id="description" rows="2" required></textarea>
+      </div>
+      <div>
+        <label for="quiz_content">Quiz Content:</label>
+        <textarea formControlName="quiz_content" id="quiz_content" rows="2" required></textarea>
+      </div>
+      <div>
+        <label for="created_date">Created Date:</label>
+
+        <input type="date" formControlName="created_date" id="created_date" required>
+      </div>
+      <div>
+        <label for="total_score_possible">Total Possible Score:</label>
+        <input type="text" formControlName="total_score_possible" id="total_score_possible" required>
       </div>
       <button type="submit" [disabled]="!quizForm.valid">Submit</button>
     </form>
