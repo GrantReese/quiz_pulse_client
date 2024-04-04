@@ -20,6 +20,11 @@ import { Question } from '../../../shared/models/question';
 export class QuestionsNewComponent {
   questionForm = new FormGroup({
 
+    score: new FormControl('', [Validators.required, Validators.max(5), Validators.pattern(/^-?\d+(\.\d+)?$/)]),
+    question_type: new FormControl('', Validators.required),
+    prompt: new FormControl('', Validators.required),
+    answer: new FormControl('', Validators.required),
+
   });
 
   constructor(private questionService: QuestionService, private router: Router) {}

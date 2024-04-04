@@ -16,6 +16,11 @@ export const routes: Routes = [
   {
     path: 'quizzes/new',
     loadComponent: () => import('./features/quizzes/quizzes-new/quizzes-new.component').then((c) => c.QuizzesNewComponent)
+  },
+
+  {
+    path: 'questions/new',
+    loadComponent: () => import('./features/questions/questions-new/questions-new.component').then((c) => c.QuestionsNewComponent)
   }
 ];
 
