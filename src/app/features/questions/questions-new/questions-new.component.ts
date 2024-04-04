@@ -5,10 +5,10 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { QuizService } from '../../../core/services/quiz.service';
+import { QuestionService } from '../../../core/services/question.service';
 import { Quiz } from '../../../shared/models/quiz';
 import { Router } from '@angular/router';
-import { Answer } from '../../../shared/models/answer';
+import { Question } from '../../../shared/models/question';
 
 @Component({
   selector: 'app-questions-new',
@@ -18,21 +18,21 @@ import { Answer } from '../../../shared/models/answer';
   styleUrl: './questions-new.component.scss'
 })
 export class QuestionsNewComponent {
-  answerForm = new FormGroup({
+  questionForm = new FormGroup({
 
   });
 
-  constructor(private answerService: AnswerService, private router: Router) {}
+  constructor(private questionService: QuestionService, private router: Router) {}
 
   onSubmit() {
-    const quiz = this.quizForm.value;
-    this.quizService.createQuiz(quiz).subscribe({
-      next: (quiz: Quiz) => {
-        console.log('Quiz created:', quiz);
+    const question = this.questionForm.value;
+    this.questionService.createQuestion(question).subscribe({
+      next: (question: Question) => {
+        console.log('Question created:', question);
         this.router.navigate(['/']);
       },
       error: (error: any) => {
-        console.error('Error creating quiz:', error);
+        console.error('Error creating question:', error);
       },
     });
   }
