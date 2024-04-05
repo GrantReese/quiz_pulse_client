@@ -15,4 +15,7 @@ export class DoQuizService {
     return this.http.get<DoQuiz[]>(`${environment.apiUrl}/do-quiz`);
 
   }
+  createDoQuiz(doquiz: any): Observable<DoQuiz> {
+    return this.http.post<DoQuiz>(`${environment.apiUrl}/do-quiz`, doquiz); // not sure if doquiz is right formatting
+  }
   }
