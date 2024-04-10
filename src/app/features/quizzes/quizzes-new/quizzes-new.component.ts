@@ -22,7 +22,7 @@ export class QuizzesNewComponent {
     title: new FormControl('', Validators.required),
     category: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
-    created_date: new FormControl(new Date()),
+    // created_date: new FormControl(new Date()),
     // quiz_content: new FormControl('', Validators.required),
     total_score_possible: new FormControl('', [Validators.required, Validators.max(100), Validators.pattern(/^-?\d+(\.\d+)?$/)]),
 
