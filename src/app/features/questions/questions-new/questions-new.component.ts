@@ -35,7 +35,7 @@ export class QuestionsNewComponent {
     this.questionService.createQuestion(question).subscribe({
       next: (question: Question) => {
         console.log('Question created:', question);
-        // this.router.navigate(['/']);
+        this.router.navigate(['/']);
       },
       error: (error: any) => {
         console.error('Error creating question:', error);

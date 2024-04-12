@@ -1,3 +1,4 @@
+<meta name="theme-color" content="#2a08e9ad">
 <div class="layout-container">
   <div class="sidebar">
     <!-- Sidebar content -->
@@ -5,7 +6,8 @@
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/sport-and-awards/quiz-icon.png" alt="logo" width="100px" />
       <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
       @if (authService.isLoggedIn()){
-               <a routerLink="/quizzes/new">Make New Quiz</a>
+        <a routerLink="/quizzes/new">Make New Quiz</a>
+        <a routerLink="/questions/new">New Question</a>
         <a (click)="logout()">Logout</a>
       }@else {
         <a routerLink="/login">Login</a>
