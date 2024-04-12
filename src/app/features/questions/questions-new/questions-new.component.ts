@@ -24,17 +24,18 @@ export class QuestionsNewComponent {
     question_type: new FormControl('', Validators.required),
     prompt: new FormControl('', Validators.required),
     answer: new FormControl('', Validators.required),
-
+    quiz_id: new FormControl('', Validators.required),
   });
 
   constructor(private questionService: QuestionService, private router: Router) {}
 
   onSubmit() {
     const question = this.questionForm.value;
+    console.log(question, "this is the question")
     this.questionService.createQuestion(question).subscribe({
       next: (question: Question) => {
         console.log('Question created:', question);
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
       },
       error: (error: any) => {
         console.error('Error creating question:', error);
