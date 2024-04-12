@@ -5,8 +5,7 @@
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/sport-and-awards/quiz-icon.png" alt="logo" width="100px" />
       <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
       @if (authService.isLoggedIn()){
-        <!-- <a routerLink=>Logout</a> was creating a dead link -->
-        <a routerLink="/quizzes/new">Make New Quiz</a>
+               <a routerLink="/quizzes/new">Make New Quiz</a>
         <a (click)="logout()">Logout</a>
       }@else {
         <a routerLink="/login">Login</a>

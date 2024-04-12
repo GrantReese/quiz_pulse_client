@@ -1,1 +1,46 @@
-<p>questions-new works!</p>
+<!-- <div class="container">
+  <h1 style="align-items: center; color: #545454"></h1>
+
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()" class="form">
+      <div>
+        <label for="score">Score:</label>
+        <input type="text" formControlName="score" id="score" required>
+      </div>
+      <div>
+        <label for="question_type">Question Type:</label>
+        <input type="text" formControlName="question_type" id="question_type" required>
+      </div>
+      <div>
+        <label for="prompt">Prompt:</label>
+        <textarea formControlName="prompt" id="prompt" rows="2" required></textarea>
+      </div>
+        <div>
+        <label for="total_score_possible">Answer:</label>
+        <textarea formControlName="answer" id="answer" rows="2" required>
+      </div>
+      <button type="submit" [disabled]="!questionForm.valid">Make a Question!</button>
+    </form>
+  </div> -->
+  <div class='container'>
+    <h1 style='align-items: center; color: #545454'></h1>
+
+    <form [formGroup]='questionForm' (ngSubmit)='onSubmit()' class='form'>
+      <div>
+        <label for='score'>Score:</label>
+        <input type='text' formControlName='score' id='score' required>
+      </div>
+      <div>
+        <label for='question_type'>Question Type:</label>
+        <input type='text' formControlName='question_type' id='question_type' required>
+      </div>
+      <div>
+        <label for='prompt'>Prompt:</label>
+        <textarea formControlName='prompt' id='prompt' rows='2' required></textarea>
+      </div>
+      <div>
+        <label for='total_score_possible'>Answer:</label>
+        <textarea formControlName='answer' id='answer' rows='2' required></textarea>
+      </div>
+      <button type='submit' [disabled]='!questionForm.valid'>Make a Question!</button>
+    </form>
+  </div>
