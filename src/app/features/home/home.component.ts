@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../../core/services/quiz.service';
 import { QuizListComponent } from '../../shared/quiz/quiz-list/quiz-list.component';
 import { Quiz } from '../../shared/models/quiz';
+import { QuestionListComponent } from '../questions/question-list/question-list.component';
 
 @Component({
   selector: 'app-home',

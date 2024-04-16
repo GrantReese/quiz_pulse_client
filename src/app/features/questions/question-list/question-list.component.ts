@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-question-list',
   standalone: true,
-  imports: [QuestionListComponent],
+  imports: [],
   templateUrl: './question-list.component.html',
   styleUrl: './question-list.component.scss'
 })
