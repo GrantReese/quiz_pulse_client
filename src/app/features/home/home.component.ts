@@ -2,19 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../../core/services/quiz.service';
 import { QuizListComponent } from '../../shared/quiz/quiz-list/quiz-list.component';
 import { Quiz } from '../../shared/models/quiz';
-import { QuestionListComponent } from '../questions/question-list/question-list.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [QuizListComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
   homeQuizzes: Quiz[] = [];
 
-  constructor(private quizService: QuizService) { }
+  constructor(private quizService: QuizService) {}
 
   ngOnInit(): void {
     this.quizService.getQuizzes().subscribe({
@@ -26,5 +26,4 @@ export class HomeComponent implements OnInit {
       },
     });
   }
-
 }

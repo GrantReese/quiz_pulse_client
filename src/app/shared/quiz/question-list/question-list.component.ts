@@ -9,6 +9,18 @@ import { QuestionService } from '../../../core/services/question.service';
   styleUrl: './question-list.component.scss'
 })
 export class QuestionListComponent {
-  @Input({ required: true }) questions!: Question[];
+  questions: Question[] = [];
 
-}
+  constructor(private questionService: QuestionService) {}
+  ngOnInit() {
+    this.questionService.getQuestions().subscribe({
+      next: (questions) => {
+        console.log("This is our pulled data", questions);
+        this.questions = questions;
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    });
+  }
+  }

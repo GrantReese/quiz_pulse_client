@@ -18,4 +18,11 @@ export class QuizService {
   createQuiz(quiz: any): Observable<Quiz> {
     return this.http.post<Quiz>(`${environment.apiUrl}/quizzes`, quiz);
   }
+  updateQuiz(quizId: number, updatedQuiz: Quiz): Observable<Quiz> {
+    return this.http.put<Quiz>(`${environment.apiUrl}/quizzes/${quizId}`, updatedQuiz);
+  }
+
+  deleteQuiz(quizId: number): Observable<void> {
+    return this.http.delete<void>(`${environment.apiUrl}/quizzes/${quizId}`);
+  }
 }
