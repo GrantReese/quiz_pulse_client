@@ -1,0 +1,10 @@
+<div>
+  <h2>Select Quizzes to Delete</h2>
+  <ul>
+    <li *ngFor="let quiz of quizzes">
+      <input type="checkbox" [value]="quiz.id">
+      <span>{{ quiz.title }}</span>
+      <button (click)="deleteQuiz(quiz.id)">Delete</button>
+    </li>
+  </ul>
+</div>

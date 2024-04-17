@@ -45,4 +45,20 @@ export const routes: Routes = [
         (c) => c.QuestionListComponent
       ),
   },
+  {
+    path: 'quizzes/quiz-list',
+    loadComponent: () =>
+      import('./shared/quiz/quiz-list/quiz-list.component').then(
+        (c) => c.QuizListComponent
+      ),
+  },
+
+  {
+    path: 'quizzes/quizzes-delete',
+    loadComponent: () =>
+      import('./features/quizzes/quizzes-delete/quizzes-delete.component').then(
+        (c) => c.QuizzesDeleteComponent
+      ),
+  }
+
 ];
