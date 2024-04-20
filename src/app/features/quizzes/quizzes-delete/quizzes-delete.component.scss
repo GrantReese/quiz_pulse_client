@@ -61,47 +61,94 @@
 //     }
 //   }
 // }
-.quiz-container {
-  max-width: 800px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the container horizontally */
-}
+// .quiz-container {
+//   max-width: 800px; /* Adjust the maximum width as needed */
+//   margin: 0 auto; /* Center the container horizontally */
+// }
 
-.quiz-list {
-  list-style-type: none;
-  padding: 0;
-}
+// .quiz-list {
+//   list-style-type: none;
+//   padding: 0;
+// }
 
-.quiz-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
-}
+// .quiz-item {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin-bottom: 10px;
+//   padding: 10px;
+//   border-radius: 5px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+// }
 
-.quiz-checkbox {
-  margin-right: 10px;
+// .quiz-checkbox {
+//   margin-right: 10px;
 
-}
+// }
 
-.quiz-title {
-  flex-grow: 1;
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 60px;
-}
+// .quiz-title {
+//   flex-grow: 1;
+//   font-size: 20px;
+//   font-weight: bold;
+//   margin-left: 60px;
+// }
 
-.delete-button {
-  background-color: #ff6b6b; /* Adjust button color */
-  color: white;
-  border: none;
-  border-radius: 3px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
+// .delete-button {
+//   background-color: #ff6b6b; /* Adjust button color */
+//   color: white;
+//   border: none;
+//   border-radius: 3px;
+//   padding: 5px 10px;
+//   cursor: pointer;
+// }
 
-.delete-button:hover {
-  background-color: #ff4949; /* Adjust hover color */
+// .delete-button:hover {
+//   background-color: #ff4949; /* Adjust hover color */
+// }
+.delete-page {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .quiz-checkbox {
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  }
+
+  .delete-btn {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #c62828;
+    }
+  }
 }
